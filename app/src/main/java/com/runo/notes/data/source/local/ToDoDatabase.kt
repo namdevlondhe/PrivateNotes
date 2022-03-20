@@ -1,0 +1,13 @@
+package com.runo.notes.data.source.local
+
+import androidx.room.Database
+import androidx.room.RoomDatabase
+import com.runo.notes.data.Task
+
+
+@Database(entities = [Task::class], version = 1, exportSchema = false)
+abstract class ToDoDatabase : RoomDatabase(){
+
+ abstract fun taskDao() : TaskDao
+
+}
